@@ -19,30 +19,36 @@
           <div id="countdown">
             <div class="time">
               <span>Dias</span>
-              <div id="days"><span class="number">08</span></div>
+              <div class="value-container">
+                <span id="days" class="number">00</span>
+              </div>
             </div>
             <span class="divider">:</span>
             <div class="time">
               <span>Horas</span>
-              <div id="horas"><span class="number">08</span></div>
+              <div class="value-container">
+                <span id="hours" class="number">00</span>
+              </div>
             </div>
             <span class="divider">:</span>
             <div class="time">
               <span>Minutos</span>
-              <div id="minutos"><span class="number">08</span></div>
+              <div class="value-container">
+                <span id="minutes" class="number">00</span>
+              </div>
             </div>
             <span class="divider">:</span>
             <div class="time">
               <span>Segundos</span>
-              <div id="segundos">
-                <span class="number">08</span>
+              <div class="value-container">
+                <span id="seconds" class="number">00</span>
               </div>
             </div>
           </div>
           <span id="describe"
             >Inscreva-se para saber mais sobre o lançamento</span
           >
-          <button type="button">Inscreva-se</button>
+          <button type="button" onclick="toggleCountdown()">Inscreva-se</button>
         </div>
         <div id="image-container">
           <img src="./images/rocket.svg" alt="" />
