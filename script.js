@@ -5,12 +5,14 @@ let minutes = 00
 let seconds = 00
 
 let isRunning
+let isModalOpen = false
 let interval
 
 let secondsElement = document.getElementById('seconds')
 let minutesElement = document.getElementById('minutes')
 let hoursElement = document.getElementById('hours')
 let daysElement = document.getElementById('days')
+let modalElement = document.getElementById('modal-container')
 
 function modifyTimeAndDay() {
   isRunning = true
@@ -45,6 +47,20 @@ function handleStartTime() {
 
 function toggleCountdown() {
   isRunning ? handleStopTime() : handleStartTime()
+}
+
+function toggleModal() {
+  isModalOpen
+    ? (modalElement.style.display = 'flex')
+    : (modalElement.style.display = 'none')
+
+  isModalOpen = !isModalOpen
+}
+
+window.onclick = function (event) {
+  if (event.target == modalElement) {
+    modalElement.style.display = 'none'
+  }
 }
 
 handleStartTime()

@@ -48,10 +48,21 @@
           <span id="describe"
             >Inscreva-se para saber mais sobre o lançamento</span
           >
-          <button type="button" onclick="toggleCountdown()">Inscreva-se</button>
+          <button type="button" id="register-button" onclick="toggleModal()">
+            Inscreva-se
+          </button>
         </div>
         <div id="image-container">
           <img src="./images/rocket.svg" alt="" />
+        </div>
+      </div>
+      <div id="modal-container">
+        <div id="modal-content">
+          <button id="close-button" onclick="toggleModal()">X</button>
+          <h2>Faça parte também!</h2>
+          <input type="text" placeholder="Nome" />
+          <input type="email" placeholder="Email" />
+          <button id="submit">Enviar</button>
         </div>
       </div>
     </div>
